@@ -113,4 +113,5 @@ dmypy.json
 
 # jupyterlite
 *.doit.db
-_output
+# _output
+dist
