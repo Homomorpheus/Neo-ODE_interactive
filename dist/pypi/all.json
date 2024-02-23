@@ -1,0 +1,28 @@
+{
+  "mass-spring": {
+    "releases": {
+      "0.0.1": [
+        {
+          "comment_text": "",
+          "digests": {
+            "md5": "1047714111cad04e710d13224e5ad419",
+            "sha256": "7430a508f141880d6e2ef94ed5827dcbb008e0bc88c0be73b10ec3147ec3ad21"
+          },
+          "downloads": -1,
+          "filename": "mass_spring-0.0.1-cp311-cp311-emscripten_3_1_46_wasm32.whl",
+          "has_sig": false,
+          "md5_digest": "1047714111cad04e710d13224e5ad419",
+          "packagetype": "bdist_wheel",
+          "python_version": "py3",
+          "requires_python": null,
+          "size": 65237,
+          "upload_time": "2024-02-11T21:57:48.004468Z",
+          "upload_time_iso_8601": "2024-02-11T21:57:48.004468Z",
+          "url": "./mass_spring-0.0.1-cp311-cp311-emscripten_3_1_46_wasm32.whl",
+          "yanked": false,
+          "yanked_reason": null
+        }
+      ]
+    }
+  }
+}

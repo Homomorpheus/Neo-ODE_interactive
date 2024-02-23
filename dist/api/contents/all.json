@@ -1,0 +1,43 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2024-02-23T18:28:42.888901Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2024-02-23T15:57:28.029760Z",
+      "mimetype": null,
+      "name": "net.ipynb",
+      "path": "net.ipynb",
+      "size": 8316,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2024-02-23T18:28:42.888901Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2024-02-23T15:54:51.190502Z",
+      "mimetype": null,
+      "name": "mass_spring.ipynb",
+      "path": "mass_spring.ipynb",
+      "size": 5626,
+      "type": "notebook",
+      "writable": true
+    }
+  ],
+  "created": "2024-02-23T18:28:42.888901Z",
+  "format": "json",
+  "hash": null,
+  "hash_algorithm": null,
+  "last_modified": "2024-02-23T18:28:42.888901Z",
+  "mimetype": null,
+  "name": "",
+  "path": "",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}
