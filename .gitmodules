@@ -1,3 +1,6 @@
 [submodule "mass_spring_for_pyodide/Neo-CLA"]
 	path = mass_spring_for_pyodide/Neo-CLA
 	url = git@github.com:kajamia/Neo-ODE.git
+[submodule "mass_spring_for_pyodide/mass_spring_for_pyodide/pybind11"]
+	path = mass_spring_for_pyodide/mass_spring_for_pyodide/pybind11
+	url = git@github.com:pybind/pybind11.git
