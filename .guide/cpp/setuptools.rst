@@ -1,7 +1,7 @@
 Compiling with setuptools
 =========================
 
-**An example of the following can be found here:  **
+**An example of the following can be found here: https://github.com/Homomorpheus/Neo-ODE_interactive/tree/main/mass_spring_for_pyodide**
 
 The first step is to write the C++ code using pybind11 and compile it to an .so file for testing.
 After that, it has to be compiled to a wheel using setuptools. Wheels (.whl files) are python's way of packaging libraries. See `this article <https://realpython.com/python-wheels/>`_.

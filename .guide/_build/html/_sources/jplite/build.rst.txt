@@ -1,6 +1,8 @@
 Build and deploy
 ================
 
+First, install `the pyodide kernel for jupyterlite <https://pypi.org/project/jupyterlite-pyodide-kernel/>`_.
+
 Now, run
 
 .. code:: bash

@@ -6,10 +6,11 @@
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Build and deploy" href="build.html" /><link rel="prev" title="Part 2: jupyterlite" href="index.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
-        <title>Fork jupyterlite - A guide on pybind and jupyterlite</title>
+        <title>Preparing jupyterlite - A guide on pybind and jupyterlite</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=36a5483c" />
     
     
@@ -135,7 +136,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -163,7 +164,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Part 2: jupyterlite</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Part 2: jupyterlite</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Fork jupyterlite</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Preparing jupyterlite</a></li>
 <li class="toctree-l2"><a class="reference internal" href="build.html">Build and deploy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="embed.html">Embedding the notebook</a></li>
 </ul>
@@ -196,20 +197,49 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main">
-          <section id="fork-jupyterlite">
-<h1>Fork jupyterlite<a class="headerlink" href="#fork-jupyterlite" title="Link to this heading">#</a></h1>
-<p><a class="reference external" href="https://jupyterlite.readthedocs.io/en/latest/quickstart/deploy.html">The jupyterlite documentation</a>.
-If you want to publish your project, fork <a class="reference external" href="https://github.com/jupyterlite/demo">this repo</a>. (Otherwise, cloning it should suffice.)</p>
+          <section id="preparing-jupyterlite">
+<h1>Preparing jupyterlite<a class="headerlink" href="#preparing-jupyterlite" title="Link to this heading">#</a></h1>
+<p><a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-primary reference external" href="https://jupyterlite.readthedocs.io/en/latest/index.html"><span>The jupyterlite documentation</span></a></p>
+<p>If you want to publish your project, fork <a class="reference external" href="https://github.com/jupyterlite/demo">this repo</a>. (Otherwise, cloning it should suffice.)</p>
 <p>Since Github Actions seems to have a problem with the my_fork/pypi directory (to be used shortly), disable it. (The simplest way is to delete the .github directory.)</p>
 <p>Replace the contents of my_fork/content with your own notebooks (those that shall be available on the built website).
 Create the my_fork/pypi directory and copy the pyodide wheel into it.</p>
-<p>Apart from that, install <a class="reference external" href="https://pypi.org/project/jupyterlite-pyodide-kernel/">the pyodide kernel for jupyterlite</a>.</p>
+<section id="importing">
+<h2>Importing<a class="headerlink" href="#importing" title="Link to this heading">#</a></h2>
+<p>Place this line before the first import:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">piplite</span>
+</pre></div>
+</div>
+<p>System packages can be import without problems.</p>
+<section id="third-party-packages-from-pypi">
+<h3>Third-party packages from PyPI<a class="headerlink" href="#third-party-packages-from-pypi" title="Link to this heading">#</a></h3>
+<p>For packages that are written only in Python or that have an emscripten wheel, use:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">await</span> <span class="n">piplite</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="s2">&quot;package&quot;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">package</span>
+</pre></div>
+</div>
+<p>It can occur that one needs to supply the URL to the wheel to piplite.install instead of the package name.
+That URL can be found on the PyPI website, under the “Download files” tab.</p>
+<p>An example for widgetsnbextension:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">await</span> <span class="n">piplite</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="s2">&quot;https://files.pythonhosted.org/packages/99/bc/82a8c3985209ca7c0a61b383c80e015fd92e74f8ba0ec1af98f9d6ca8dce/widgetsnbextension-4.0.10-py3-none-any.whl&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="homemade-packages">
+<h3>Homemade packages<a class="headerlink" href="#homemade-packages" title="Link to this heading">#</a></h3>
+<p>The package called foo (which was earlier placed in the pypi directory) can be installed the same way:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">await</span> <span class="n">piplite</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">foo</span>
+</pre></div>
+</div>
+</section>
+</section>
 </section>
 
         </article>
@@ -255,8 +285,31 @@ Create the my_fork/pypi directory and copy the pyodide wheel into it.</p>
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Preparing jupyterlite</a><ul>
+<li><a class="reference internal" href="#importing">Importing</a><ul>
+<li><a class="reference internal" href="#third-party-packages-from-pypi">Third-party packages from PyPI</a></li>
+<li><a class="reference internal" href="#homemade-packages">Homemade packages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
@@ -267,5 +320,6 @@ Create the my_fork/pypi directory and copy the pyodide wheel into it.</p>
     <script src="../_static/scripts/furo.js?v=32e29ea5"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
     </body>
 </html>

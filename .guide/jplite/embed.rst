@@ -9,3 +9,9 @@ put the following into your rst source code:
     .. raw:: html
 
         <iframe src="https://username.github.io/my_fork/dist/index.html" width=100%, height=500>
+
+This results in the following:
+
+.. raw:: html
+
+   <iframe src="https://homomorpheus.github.io/Neo-ODE_interactive/dist/lab/index.html" width=100%, height=500>

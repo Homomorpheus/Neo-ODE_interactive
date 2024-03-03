@@ -3,13 +3,14 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Embedding the notebook" href="embed.html" /><link rel="prev" title="Fork jupyterlite" href="fork.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Embedding the notebook" href="embed.html" /><link rel="prev" title="Preparing jupyterlite" href="fork.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
         <title>Build and deploy - A guide on pybind and jupyterlite</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=36a5483c" />
     
     
@@ -163,7 +164,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Part 2: jupyterlite</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Part 2: jupyterlite</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="fork.html">Fork jupyterlite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fork.html">Preparing jupyterlite</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Build and deploy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="embed.html">Embedding the notebook</a></li>
 </ul>
@@ -204,6 +205,7 @@
         <article role="main">
           <section id="build-and-deploy">
 <h1>Build and deploy<a class="headerlink" href="#build-and-deploy" title="Link to this heading">#</a></h1>
+<p>First, install <a class="reference external" href="https://pypi.org/project/jupyterlite-pyodide-kernel/">the pyodide kernel for jupyterlite</a>.</p>
 <p>Now, run</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>lite<span class="w"> </span>lite<span class="w"> </span>build<span class="w"> </span>--contents<span class="w"> </span>content<span class="w"> </span>--output-dir<span class="w"> </span>dist
 <span class="nb">cd</span><span class="w"> </span>dist
@@ -238,7 +240,7 @@ Note that this link points to the dist directory of your repo.</p>
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Fork jupyterlite</div>
+                <div class="title">Preparing jupyterlite</div>
                 
               </div>
             </a>
@@ -272,5 +274,6 @@ Note that this link points to the dist directory of your repo.</p>
     <script src="../_static/scripts/furo.js?v=32e29ea5"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
     </body>
 </html>
