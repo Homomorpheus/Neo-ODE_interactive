@@ -217,6 +217,16 @@ jupyter<span class="w"> </span>lite<span class="w"> </span>serve<span class="w">
 If you have found a more elegant solution for this, please contact the author of this site.</p>
 <p>Now, commit and push everything, including the built site. Enable Github Pages and open <cite>https://username.github.io/my_fork/dist/index.html</cite> .
 Note that this link points to the dist directory of your repo.</p>
+<p>Should the uploaded page not be able to find the pyodide kernel,
+there is an unexpected (not to say shady) workaround:
+In .github/workflows/deploy.yml , turn the</p>
+<div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span>README.md<span class="w"> </span>content
+</pre></div>
+</div>
+<p>line into something that throws an error, like:</p>
+<div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span><span class="nb">false</span>
+</pre></div>
+</div>
 </section>
 
         </article>

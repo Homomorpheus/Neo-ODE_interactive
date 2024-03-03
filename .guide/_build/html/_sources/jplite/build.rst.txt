@@ -18,3 +18,17 @@ If you have found a more elegant solution for this, please contact the author of
 
 Now, commit and push everything, including the built site. Enable Github Pages and open `https://username.github.io/my_fork/dist/index.html` .
 Note that this link points to the dist directory of your repo.
+
+Should the uploaded page not be able to find the pyodide kernel,
+there is an unexpected (not to say shady) workaround:
+In .github/workflows/deploy.yml , turn the
+
+.. code:: Bash
+
+    cp README.md content
+
+line into something that throws an error, like:
+
+.. code:: Bash
+
+    false
