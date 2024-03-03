@@ -10,6 +10,15 @@ This document is meant to guide you through the process of integrating C++ into 
 This includes the usage of pybind11, setuptools, emscripten/pyodide and jupyterlite itself.
 There should be a way to integrate CMake as well. However, using setuptools solves a bug where emcmake fails to find pybind's cmake files.
 
+TODO: embed
+TODO: imports
+
+The idea is to create the following:
+
+.. raw:: html
+
+   <iframe src="https://homomorpheus.github.io/Neo-ODE_interactive/dist/lab/index.html" width=100%, height=500>
+
 .. toctree::
    :maxdepth: 2
 

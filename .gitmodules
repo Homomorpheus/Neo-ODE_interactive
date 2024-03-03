@@ -1,0 +1,3 @@
+[submodule "mass_spring_for_pyodide/Neo-CLA"]
+	path = mass_spring_for_pyodide/Neo-CLA
+	url = git@github.com:kajamia/Neo-ODE.git
