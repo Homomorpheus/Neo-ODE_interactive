@@ -1,4 +1,30 @@
 {
+  "lib-rigid-body": {
+    "releases": {
+      "0.0.1": [
+        {
+          "comment_text": "",
+          "digests": {
+            "md5": "19bfc184eb04ac674dd70a8141732aee",
+            "sha256": "896f31fd157d89fcb62c3bc0078ef68549d0f467e4fb8a621b60583668ed6ee2"
+          },
+          "downloads": -1,
+          "filename": "lib_rigid_body-0.0.1-cp311-cp311-emscripten_3_1_46_wasm32.whl",
+          "has_sig": false,
+          "md5_digest": "19bfc184eb04ac674dd70a8141732aee",
+          "packagetype": "bdist_wheel",
+          "python_version": "py3",
+          "requires_python": ">=3.7",
+          "size": 70208,
+          "upload_time": "2024-04-23T16:01:47.578660Z",
+          "upload_time_iso_8601": "2024-04-23T16:01:47.578660Z",
+          "url": "./lib_rigid_body-0.0.1-cp311-cp311-emscripten_3_1_46_wasm32.whl",
+          "yanked": false,
+          "yanked_reason": null
+        }
+      ]
+    }
+  },
   "mass-spring": {
     "releases": {
       "0.0.1": [
@@ -19,6 +45,32 @@
           "upload_time": "2024-02-11T21:57:48.004468Z",
           "upload_time_iso_8601": "2024-02-11T21:57:48.004468Z",
           "url": "./mass_spring-0.0.1-cp311-cp311-emscripten_3_1_46_wasm32.whl",
+          "yanked": false,
+          "yanked_reason": null
+        }
+      ]
+    }
+  },
+  "scikit-build-example": {
+    "releases": {
+      "0.0.1": [
+        {
+          "comment_text": "",
+          "digests": {
+            "md5": "a3249a1e69f318461deeb2bfa3a76f4b",
+            "sha256": "f73a0ea4a14ebeefff8271fc5e8a9ffade17325b1857c5e6cce055d2bcce98b6"
+          },
+          "downloads": -1,
+          "filename": "scikit_build_example-0.0.1-cp311-cp311-emscripten_3_1_46_wasm32.whl",
+          "has_sig": false,
+          "md5_digest": "a3249a1e69f318461deeb2bfa3a76f4b",
+          "packagetype": "bdist_wheel",
+          "python_version": "py3",
+          "requires_python": ">=3.7",
+          "size": 24446,
+          "upload_time": "2024-04-23T13:31:37.972800Z",
+          "upload_time_iso_8601": "2024-04-23T13:31:37.972800Z",
+          "url": "./scikit_build_example-0.0.1-cp311-cp311-emscripten_3_1_46_wasm32.whl",
           "yanked": false,
           "yanked_reason": null
         }

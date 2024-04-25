@@ -14,7 +14,7 @@ The idea is to create the following:
 
 .. raw:: html
 
-   <iframe src="https://homomorpheus.github.io/Neo-ODE_interactive/dist/lab/index.html" width=100%, height=500>
+   <iframe src="https://homomorpheus.github.io/Neo-ODE_interactive/dist/lab/index.html" width=100%, height=500></iframe>
 
 .. toctree::
    :maxdepth: 2

@@ -1,9 +1,9 @@
 Pyodide
 =======
 
-**`This site <https://pyodide.org/en/stable/development/building-and-testing-packages.html#building-and-testing-packages-out-of-tree>`_ is essential.**
+`This site <https://pyodide.org/en/stable/development/building-and-testing-packages.html#building-and-testing-packages-out-of-tree>`_ is essential!
 Under the hood, pyodide uses emscripten. Thus, `install the emsdk <https://emscripten.org/docs/getting_started/downloads.html>`_.
-On Linux, do not use your package manager as we will need emscripten to be able to manage it's own version.
+On Linux, do not use your package manager for this - emscripten will need to be able to manage it's own version.
 Add
 
 .. code:: bash
@@ -21,6 +21,7 @@ Run
     emsdk install ${PYODIDE_EMSCRIPTEN_VERSION}
     emsdk activate ${PYODIDE_EMSCRIPTEN_VERSION}
 
+Apart from that, install pyodide-build using pip.
 Now, python -m build can be replaced with
 
 .. code:: bash

@@ -52,3 +52,5 @@ The package called foo (which was earlier placed in the pypi directory) can be i
 
     await piplite.install("foo")
     import foo
+
+`This alternative to the pypi directory <https://jupyterlite.readthedocs.io/en/latest/reference/cli.html#pipliteaddon>`_ might also be of interest, especially if you want to build using Github Pages.

@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Part 2: jupyterlite" href="../jplite/index.html" /><link rel="prev" title="Compiling with setuptools" href="setuptools.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Part 2: jupyterlite" href="../jplite/index.html" /><link rel="prev" title="Compiling with pure setuptools" href="setuptools.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
         <title>Pyodide - A guide on pybind and jupyterlite</title>
@@ -159,12 +159,12 @@
   <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Homepage</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Part 1: C++</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Part 1: C++</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="setuptools.html">Compiling with setuptools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setuptools.html">Compiling with pure setuptools</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Pyodide</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../jplite/index.html">Part 2: jupyterlite</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Part 2: jupyterlite</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../jplite/fork.html">Fork jupyterlite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jplite/fork.html">Preparing jupyterlite</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../jplite/build.html">Build and deploy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../jplite/embed.html">Embedding the notebook</a></li>
 </ul>
@@ -205,9 +205,9 @@
         <article role="main">
           <section id="pyodide">
 <h1>Pyodide<a class="headerlink" href="#pyodide" title="Link to this heading">#</a></h1>
-<p><strong>`This site &lt;https://pyodide.org/en/stable/development/building-and-testing-packages.html#building-and-testing-packages-out-of-tree&gt;`_ is essential.</strong>
+<p><a class="reference external" href="https://pyodide.org/en/stable/development/building-and-testing-packages.html#building-and-testing-packages-out-of-tree">This site</a> is essential!
 Under the hood, pyodide uses emscripten. Thus, <a class="reference external" href="https://emscripten.org/docs/getting_started/downloads.html">install the emsdk</a>.
-On Linux, do not use your package manager as we will need emscripten to be able to manage it’s own version.
+On Linux, do not use your package manager for this - emscripten will need to be able to manage it’s own version.
 Add</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">EMSDK_QUIET</span><span class="o">=</span><span class="m">1</span>
 <span class="nb">source</span><span class="w"> </span><span class="s2">&quot;/home/norberth/software/emsdk/emsdk_env.sh&quot;</span>
@@ -220,7 +220,8 @@ emsdk<span class="w"> </span>install<span class="w"> </span><span class="si">${<
 emsdk<span class="w"> </span>activate<span class="w"> </span><span class="si">${</span><span class="nv">PYODIDE_EMSCRIPTEN_VERSION</span><span class="si">}</span>
 </pre></div>
 </div>
-<p>Now, python -m build can be replaced with</p>
+<p>Apart from that, install pyodide-build using pip.
+Now, python -m build can be replaced with</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pyodide<span class="w"> </span>build
 </pre></div>
 </div>
@@ -248,7 +249,7 @@ emsdk<span class="w"> </span>activate<span class="w"> </span><span class="si">${
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Compiling with setuptools</div>
+                <div class="title">Compiling with pure setuptools</div>
                 
               </div>
             </a>

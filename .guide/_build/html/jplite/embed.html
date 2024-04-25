@@ -205,15 +205,19 @@
         <article role="main">
           <section id="embedding-the-notebook">
 <h1>Embedding the notebook<a class="headerlink" href="#embedding-the-notebook" title="Link to this heading">#</a></h1>
-<p>If you want to integrate the notebook into a site generated with sphinx,
-put the following into your rst source code:</p>
+<p>If you want to integrate the notebook into a site generated with sphinx, put the following into your rst source code:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">raw</span><span class="p">::</span> html
 
-    &lt;iframe src=&quot;https://username.github.io/my_fork/dist/index.html&quot; width=100%, height=500&gt;
+    &lt;iframe src=&quot;https://username.github.io/my_fork/dist/index.html&quot; width=100%, height=500&gt;&lt;/iframe&gt;
 </pre></div>
 </div>
-<p>This results in the following:</p>
-<iframe src="https://homomorpheus.github.io/Neo-ODE_interactive/dist/lab/index.html" width=100%, height=500></section>
+<p>Make sure that your HTML inside the raw directive is correct. Otherwise, the browser will try to fix it, which only gives you problems.</p>
+<p>The above code results in the following:</p>
+<iframe src="https://homomorpheus.github.io/Neo-ODE_interactive/dist/lab/index.html" width=100%, height=500></iframe><p>One can also right-click on a file in jupyterlite’s file browser, which gives a menu with the option to copy a link to that file, in jupyterlite.
+See <a class="reference external" href="https://jupyterlite.readthedocs.io/en/stable/howto/content/share.html">https://jupyterlite.readthedocs.io/en/stable/howto/content/share.html</a>.
+Using the resulting link, one achieves the following:</p>
+<iframe src="https://homomorpheus.github.io/Neo-ODE_interactive/dist/lab/index.html?path=net.ipynb" width=100%, height=500></iframe><p>Another (more complicated) option is <a class="reference external" href="https://jupyterlite-sphinx.readthedocs.io/en/latest/index.html">Jupyterlite-Sphinx</a>.</p>
+</section>
 
         </article>
       </div>

@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Pyodide" href="pyodide.html" /><link rel="prev" title="Part 1: C++" href="index.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
-        <title>Compiling with setuptools - A guide on pybind and jupyterlite</title>
+        <title>Compiling with pure setuptools - A guide on pybind and jupyterlite</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -159,12 +159,12 @@
   <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Homepage</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Part 1: C++</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Part 1: C++</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Compiling with setuptools</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Compiling with pure setuptools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pyodide.html">Pyodide</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../jplite/index.html">Part 2: jupyterlite</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Part 2: jupyterlite</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../jplite/fork.html">Fork jupyterlite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jplite/fork.html">Preparing jupyterlite</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../jplite/build.html">Build and deploy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../jplite/embed.html">Embedding the notebook</a></li>
 </ul>
@@ -203,8 +203,9 @@
           </label>
         </div>
         <article role="main">
-          <section id="compiling-with-setuptools">
-<h1>Compiling with setuptools<a class="headerlink" href="#compiling-with-setuptools" title="Link to this heading">#</a></h1>
+          <section id="compiling-with-pure-setuptools">
+<h1>Compiling with pure setuptools<a class="headerlink" href="#compiling-with-pure-setuptools" title="Link to this heading">#</a></h1>
+<p>scikit-build-core can be recommended over this method.</p>
 <p><strong>An example of the following can be found here: https://github.com/Homomorpheus/Neo-ODE_interactive/tree/main/mass_spring_for_pyodide</strong></p>
 <p>The first step is to write the C++ code using pybind11 and compile it to an .so file for testing.
 After that, it has to be compiled to a wheel using setuptools. Wheels (.whl files) are python’s way of packaging libraries. See <a class="reference external" href="https://realpython.com/python-wheels/">this article</a>.
@@ -231,7 +232,7 @@ The following should be in foo/conf.py :</p>
            <span class="s2">&quot;Newton.h&quot;</span><span class="p">]</span>
 
 <span class="n">setup</span><span class="p">(</span>
-    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
     <span class="n">version</span><span class="o">=</span><span class="s2">&quot;0.0.1&quot;</span><span class="p">,</span>
     <span class="n">ext_modules</span><span class="o">=</span><span class="n">ext_modules</span><span class="p">,</span>
     <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>

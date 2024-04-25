@@ -1,5 +1,7 @@
-Compiling with setuptools
-=========================
+Compiling with pure setuptools
+==============================
+
+scikit-build-core can be recommended over this method.
 
 **An example of the following can be found here: https://github.com/Homomorpheus/Neo-ODE_interactive/tree/main/mass_spring_for_pyodide**
 
@@ -33,7 +35,7 @@ The following should be in foo/conf.py :
                "Newton.h"]
 
     setup(
-        name="",
+        name="foo",
         version="0.0.1",
         ext_modules=ext_modules,
         headers=headers,

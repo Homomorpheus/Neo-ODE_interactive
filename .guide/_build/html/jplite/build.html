@@ -207,14 +207,13 @@
 <h1>Build and deploy<a class="headerlink" href="#build-and-deploy" title="Link to this heading">#</a></h1>
 <p>First, install <a class="reference external" href="https://pypi.org/project/jupyterlite-pyodide-kernel/">the pyodide kernel for jupyterlite</a>.</p>
 <p>Now, run</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>lite<span class="w"> </span>lite<span class="w"> </span>build<span class="w"> </span>--contents<span class="w"> </span>content<span class="w"> </span>--output-dir<span class="w"> </span>dist
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>lite<span class="w"> </span>build<span class="w"> </span>--contents<span class="w"> </span>content<span class="w"> </span>--output-dir<span class="w"> </span>dist
 <span class="nb">cd</span><span class="w"> </span>dist
 jupyter<span class="w"> </span>lite<span class="w"> </span>serve<span class="w"> </span>--port<span class="o">=</span><span class="m">8000</span>
 </pre></div>
 </div>
 <p>to build and deploy locally. Open the URL in the output of the last command to see the finished product.</p>
-<p><strong>If you recompile the site and the content hasn’t changed, augment the port number.</strong>
-If you have found a more elegant solution for this, please contact the author of this site.</p>
+<p><strong>If you recompile the site and the content hasn’t changed, delete the file inside jupyterlite. It will immediately pop back up, in the updated version.</strong></p>
 <p>Now, commit and push everything, including the built site. Enable Github Pages and open <cite>https://username.github.io/my_fork/dist/index.html</cite> .
 Note that this link points to the dist directory of your repo.</p>
 <p>Should the uploaded page not be able to find the pyodide kernel,
