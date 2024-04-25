@@ -159,7 +159,8 @@
   <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Homepage</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../cpp/index.html">Part 1: C++</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Part 1: C++</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../cpp/setuptools.html">Compiling with setuptools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cpp/scikitbuildcore.html">Compiling with scikit-build-core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cpp/setuptools.html">Compiling with pure setuptools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cpp/pyodide.html">Pyodide</a></li>
 </ul>
 </li>
@@ -213,7 +214,9 @@ jupyter<span class="w"> </span>lite<span class="w"> </span>serve<span class="w">
 </pre></div>
 </div>
 <p>to build and deploy locally. Open the URL in the output of the last command to see the finished product.</p>
-<p><strong>If you recompile the site and the content hasn’t changed, delete the file inside jupyterlite. It will immediately pop back up, in the updated version.</strong></p>
+<p><strong>If you recompile the site and the content hasn’t changed, delete the file inside jupyterlite. It will immediately pop back up, in the updated version.</strong>
+If that does not work, delete the IndexedDB entry of the site in the browser’s dev tools and reload.</p>
+<p>When deploying locally, the server will need to be restarted after the wheel is rebuilt.</p>
 <p>Now, commit and push everything, including the built site. Enable Github Pages and open <cite>https://username.github.io/my_fork/dist/index.html</cite> .
 Note that this link points to the dist directory of your repo.</p>
 <p>Should the uploaded page not be able to find the pyodide kernel,

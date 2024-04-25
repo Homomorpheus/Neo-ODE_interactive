@@ -10,6 +10,8 @@ A full working example can be found here: https://github.com/triadtitans/ASC-ODE
 That project is also used here: https://github.com/triadtitans/rigid_body_interactive
 It can be recommended to clone and try this official example: https://github.com/pybind/scikit_build_example
 
+Note that it can be a problem if the absolute path of the project folder contains whitespace.
+
 The project shall be called foo; the library being importable as lib_foo.foo.
 It must contain:
 
