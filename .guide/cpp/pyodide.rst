@@ -13,6 +13,8 @@ Add
 
 to your .bashrc or .zshrc on Linux or MacOS or do the equivalent under Windows (see emscripten documentation).
 
+Apart from that, install pyodide-build using pip. Make sure to use a version of pyodide-build that was released after March 30, 2024, such as 0.25.1. Some earlier versions - like the alpha versions of 0.26.0 - won't work.
+
 Run
 
 .. code:: bash
@@ -21,7 +23,6 @@ Run
     emsdk install ${PYODIDE_EMSCRIPTEN_VERSION}
     emsdk activate ${PYODIDE_EMSCRIPTEN_VERSION}
 
-Apart from that, install pyodide-build using pip.
 Now, python -m build can be replaced with
 
 .. code:: bash

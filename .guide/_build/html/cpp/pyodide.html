@@ -159,6 +159,7 @@
   <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Homepage</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Part 1: C++</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Part 1: C++</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="scikitbuildcore.html">Compiling with scikit-build-core</a></li>
 <li class="toctree-l2"><a class="reference internal" href="setuptools.html">Compiling with pure setuptools</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Pyodide</a></li>
 </ul>
@@ -214,14 +215,14 @@ Add</p>
 </pre></div>
 </div>
 <p>to your .bashrc or .zshrc on Linux or MacOS or do the equivalent under Windows (see emscripten documentation).</p>
+<p>Apart from that, install pyodide-build using pip. Make sure to use a version of pyodide-build that was released after March 30, 2024, such as 0.25.1. Some earlier versions - like the alpha versions of 0.26.0 - won’t work.</p>
 <p>Run</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">PYODIDE_EMSCRIPTEN_VERSION</span><span class="o">=</span><span class="k">$(</span>pyodide<span class="w"> </span>config<span class="w"> </span>get<span class="w"> </span>emscripten_version<span class="k">)</span>
 emsdk<span class="w"> </span>install<span class="w"> </span><span class="si">${</span><span class="nv">PYODIDE_EMSCRIPTEN_VERSION</span><span class="si">}</span>
 emsdk<span class="w"> </span>activate<span class="w"> </span><span class="si">${</span><span class="nv">PYODIDE_EMSCRIPTEN_VERSION</span><span class="si">}</span>
 </pre></div>
 </div>
-<p>Apart from that, install pyodide-build using pip.
-Now, python -m build can be replaced with</p>
+<p>Now, python -m build can be replaced with</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pyodide<span class="w"> </span>build
 </pre></div>
 </div>
